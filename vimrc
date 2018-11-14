@@ -58,6 +58,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'dag/vim-fish'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'AndrewRadev/splitjoin.vim'
 call plug#end()
 
 " Ctrlp config
@@ -67,3 +68,12 @@ nnoremap <Leader>t :CtrlP<CR>
 " NerdTree config
 map ` :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+" vim-go config
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+let g:go_fmt_command = "goimports"
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_deadline = "5s"
