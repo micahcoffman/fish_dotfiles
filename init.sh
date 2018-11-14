@@ -7,6 +7,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ln -s ~/fish_dotfiles/config.fish ~/.config/fish/config.fish
+ln -s ~/fish_dotfiles/functions/ ~/.config/fish/functions
 ln -s ~/fish_dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/fish_dotfiles/vimrc ~/.vimrc
 
