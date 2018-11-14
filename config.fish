@@ -1,3 +1,9 @@
+# Start tmux
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
 # Source in Expel specific variables that should not be in github
 source ~/expel_fish_profile
 
