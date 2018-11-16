@@ -64,6 +64,7 @@ call plug#end()
 " Ctrlp config
 nnoremap <Leader>p :CtrlP<CR>
 nnoremap <Leader>t :CtrlP<CR>
+let g:ctrlp_show_hidden = 1
 
 " NerdTree config
 map ` :NERDTreeToggle<CR>
@@ -75,5 +76,5 @@ let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
