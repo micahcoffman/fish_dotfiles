@@ -29,6 +29,8 @@ nmap <Leader><Leader> <c-^>
 " Next/Previous Buffer
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
+" Replace all
+nmap <Leader>r :%s/
 
 " Insert to normal mode
 inoremap jk <Esc>
@@ -59,6 +61,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dag/vim-fish'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Ctrlp config
@@ -73,7 +76,6 @@ let NERDTreeShowHidden=1
 " vim-go config
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 let g:go_fmt_command = "goimports"
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
@@ -84,3 +86,15 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
