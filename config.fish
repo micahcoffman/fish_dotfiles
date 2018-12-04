@@ -5,6 +5,7 @@ source ~/expel_fish_profile
 
 # Add local bin to path
 set -x PATH /usr/local/bin $PATH
+set -x PATH /usr/local/sbin $PATH
 
 # Golang setup
 set -x GOROOT '/usr/local/bin/go'
