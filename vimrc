@@ -26,7 +26,7 @@ set autoread                    " Automatically read changed files
 set autoindent                  " Enable Autoindent
 set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
-set hlsearch                    " Highlight found searches
+set nohlsearch                  " Do not highlight found searches
 set noerrorbells                " No beeps
 set number                      " Show line numbers
 set showcmd                     " Show me what I'm typing
@@ -41,19 +41,11 @@ set ignorecase                  " Search case insensitive...
 set smartcase                   " ... but not it begins with upper case
 set completeopt=menu,menuone    " Show popup menu, even if there is one entry
 set pumheight=10                " Completion window max size
-set nocursorcolumn              " Do not highlight column (speeds up highlighting)
-set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 set nowrap			" Stop word wrapping
-set scrolloff=1			"Space above/beside cursor from screen edges"
+set scrolloff=1			" Space above/beside cursor from screen edges
 set sidescrolloff=5
-
-" Enable to copy to clipboard for operations like yank, delete, change and put
-" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
-if has('unnamedplus')
-  set clipboard^=unnamed
-  set clipboard^=unnamedplus
-endif
+set clipboard=unnamed           " Use system clipboard
 
 " This enables us to undo files even if you exit Vim.
 if has('persistent_undo')
