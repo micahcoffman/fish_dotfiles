@@ -20,6 +20,9 @@ call plug#end()
 set nocompatible                " Enables us Vim specific features
 filetype off                    " Reset filetype detection first ...
 filetype plugin indent on       " ... and enable filetype detection
+set tabstop=4                   " Show existing tab with 4 spaces width
+set shiftwidth=4                " When indenting with '>', use 4 spaces width
+set expandtab                   " On pressing tab, insert 4 spaces
 set laststatus=2                " Show status line always
 set encoding=utf-8              " Set default encoding to UTF-8
 set autoread                    " Automatically read changed files
@@ -137,9 +140,6 @@ let g:go_highlight_generate_tags = 1
 
 augroup go
   autocmd!
-
-  " Show by default 4 spaces for a tab
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
