@@ -1,20 +1,13 @@
-# Start tmux
-# if status is-interactive
-# and not set -q TMUX
-#     exec tmux attach
-# end
-
-# Source in Expel specific variables that should not be in github
 source ~/expel_fish_profile
 
 # Init pyenv
-status --is-interactive; and source (pyenv init -|psub)
+# status --is-interactive; and source (pyenv init -|psub)
 
 # Add local bin to path
-set -U fish_user_paths /usr/local/bin $fish_user_paths
+set -x PATH /usr/local/bin $PATH
 
 # Golang setup
-set GOROOT '/usr/local/bin/go'
-set GOPATH '/Users/micahcoffman/go'
-set -U fish_user_paths $GOPATH/bin $fish_user_paths
+set -x GOROOT '/usr/local/bin/go'
+set -x GOPATH '/Users/micahcoffman/go'
+set -x PATH $GOPATH/bin $PATH
 
