@@ -83,20 +83,9 @@ inoremap kj <Esc>
 inoremap Kj <Esc>
 inoremap kJ <Esc>
 
-" Switch windows
-nnoremap gw <C-w><C-w>
-nnoremap GW <C-w><C-w>
-nnoremap Gw <C-w><C-w>
-nnoremap gW <C-w><C-w>
-nnoremap wg <C-w><C-w>
-nnoremap Wg <C-w><C-w>
-nnoremap wG <C-w><C-w>
-
-" Visual linewise up and down by default (and use gj gk to go quicker)
-noremap <Up> gk
-noremap <Down> gj
-noremap j gj
-noremap k gk
+" Scroll page normal mode
+nnoremap J <C-e>
+nnoremap K <C-y>
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
