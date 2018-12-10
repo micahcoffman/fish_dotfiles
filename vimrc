@@ -83,6 +83,15 @@ inoremap kj <Esc>
 inoremap Kj <Esc>
 inoremap kJ <Esc>
 
+" Switch windows normal mode
+nnoremap gw <C-w><C-w>
+nnoremap GW <C-w><C-w>
+nnoremap Gw <C-w><C-w>
+nnoremap gW <C-w><C-w>
+nnoremap wg <C-w><C-w>
+nnoremap Wg <C-w><C-w>
+nnoremap wG <C-w><C-w>
+
 " Scroll page normal mode
 nnoremap J <C-e>
 nnoremap K <C-y>
