@@ -45,9 +45,9 @@ set smartcase                   " ... but not it begins with upper case
 set completeopt=menu,menuone    " Show popup menu, even if there is one entry
 set pumheight=10                " Completion window max size
 set lazyredraw                  " Wait to redraw
-set nowrap			" Stop word wrapping
-set scrolloff=1			" Space above/beside cursor from screen edges
-set sidescrolloff=5
+set nowrap			            " Stop word wrapping
+set scrolloff=1			        " Space above/beside cursor from screen edges
+set sidescroll=1                " Sidescroll one column at a time
 set clipboard=unnamed           " Use system clipboard
 
 " This enables us to undo files even if you exit Vim.
