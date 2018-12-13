@@ -115,7 +115,7 @@ let g:ctrlp_show_hidden = 1
 """"""""""""""""""""""""
 "    NerdTreeconfig    "
 """"""""""""""""""""""""
-map ` :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 
