@@ -168,6 +168,10 @@ function! s:build_go_files()
   endif
 endfunction
 
+
+""""""""""""""""""""""""
+"    python config     "
+""""""""""""""""""""""""
 augroup python
     autocmd!
     
