@@ -1,5 +1,8 @@
 #!/bin/bash 
-rm -rf ~/.vim ~/.vimrc ~/.config/fish/config.fish ~/.tmux ~/.tmux.conf 2> /dev/null
+rm -rf ~/.vim ~/.vimrc ~/.config/fish/config.fish ~/.config/fish/functions ~/.tmux ~/.tmux.conf 2> /dev/null
+
+brew install fish
+brew install tmux
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
