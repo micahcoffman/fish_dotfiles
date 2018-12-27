@@ -173,14 +173,3 @@ augroup python
     
     autocmd BufNewFile,BufRead *.py setlocal noexpandtab tabstop=4 shiftwidth=4
 augroup END
-
-augroup text
-    au!
-    au BufRead,BufNewFile *.txt setlocal ft=txt
-    au BufRead,BufNewFile Makefile* setlocal noexpandtab
-augroup END
-
-augroup json
-    au!
-    au BufRead,BufNewFile *.json setfiletype json
-augroup END
