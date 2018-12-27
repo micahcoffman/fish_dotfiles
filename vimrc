@@ -20,9 +20,6 @@ call plug#end()
 set nocompatible                " Enables us Vim specific features
 filetype off                    " Reset filetype detection first ...
 filetype plugin indent on       " ... and enable filetype detection
-set tabstop=4                   " Show existing tab with 4 spaces width
-set shiftwidth=4                " When indenting with '>', use 4 spaces width
-set expandtab                   " On pressing tab, insert 4 spaces
 set laststatus=2                " Show status line always
 set encoding=utf-8              " Set default encoding to UTF-8
 set autoread                    " Automatically read changed files
@@ -141,6 +138,8 @@ let g:go_doc_keywordprg_enabled = 0
 augroup go
   autocmd!
 
+  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
@@ -168,3 +167,20 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+augroup python
+    autocmd!
+    
+    autocmd BufNewFile,BufRead *.py setlocal noexpandtab tabstop=4 shiftwidth=4
+augroup END
+
+augroup text
+    au!
+    au BufRead,BufNewFile *.txt setlocal ft=txt
+    au BufRead,BufNewFile Makefile* setlocal noexpandtab
+augroup END
+
+augroup json
+    au!
+    au BufRead,BufNewFile *.json setfiletype json
+augroup END
