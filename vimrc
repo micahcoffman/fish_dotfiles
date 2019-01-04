@@ -124,7 +124,6 @@ let NERDTreeShowHidden=1
 """"""""""""""""""""""""
 let g:go_fmt_command = "goimports"
 
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'gosec', 'goimports', 'varcheck', 'structcheck', 'unparam']
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
@@ -150,9 +149,6 @@ augroup go
 
   " :GoInfo
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
-
-  " :GoMetaLinter
-  autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
 
   " :GoDef but opens in a vertical split
   autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
