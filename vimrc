@@ -18,12 +18,10 @@ call plug#end()
 "      Settings      "
 """"""""""""""""""""""
 set nocompatible                " Enables us Vim specific features
-filetype off                    " Reset filetype detection first ...
-filetype plugin indent on       " ... and enable filetype detection
+filetype plugin indent on       " Enable filetype detection
 set laststatus=2                " Show status line always
 set encoding=utf-8              " Set default encoding to UTF-8
 set autoread                    " Automatically read changed files
-set autoindent                  " Enable Autoindent
 set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
 set nohlsearch                  " Do not highlight found searches
@@ -53,6 +51,15 @@ if has('persistent_undo')
   set undodir=~/.config/vim/tmp/undo//
 endif
 
+""""""""""""""""""""""""""
+"      Tab Settings      "
+""""""""""""""""""""""""""
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set autoindent                  
+set smartindent
 
 """"""""""""""""""""""
 "     Key-Mapping    "
@@ -139,8 +146,6 @@ let g:go_doc_keywordprg_enabled = 0
 augroup go
   autocmd!
 
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
-
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
@@ -165,13 +170,3 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
-
-""""""""""""""""""""""""
-"    python config     "
-""""""""""""""""""""""""
-augroup python
-    autocmd!
-    
-    autocmd BufNewFile,BufRead *.py setlocal noexpandtab tabstop=4 shiftwidth=4
-augroup END
