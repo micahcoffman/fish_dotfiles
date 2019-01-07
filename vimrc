@@ -97,8 +97,8 @@ nnoremap Wg <C-w><C-w>
 nnoremap wG <C-w><C-w>
 
 " Scroll page normal mode
-nnoremap J <C-e>
-nnoremap K <C-y>
+nnoremap J 5<C-e>
+nnoremap K 5<C-y>
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
