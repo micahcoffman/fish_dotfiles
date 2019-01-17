@@ -80,12 +80,13 @@ nmap <Leader>r :%s/
 
 " Insert to normal mode
 inoremap jk <Esc>
-inoremap JK <Esc>
-inoremap Jk <Esc>
 inoremap jK <Esc>
+inoremap Jk <Esc>
+inoremap JK <Esc>
 inoremap kj <Esc>
-inoremap Kj <Esc>
 inoremap kJ <Esc>
+inoremap Kj <Esc>
+inoremap KJ <Esc>
 
 " Switch windows normal mode
 nnoremap gw <C-w><C-w>
