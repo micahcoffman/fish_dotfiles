@@ -129,11 +129,6 @@ let NERDTreeShowHidden=1
 
 
 """"""""""""""""""""""""
-"    flake8 config     "
-""""""""""""""""""""""""
-let g:flake8_ignore="E501,W293"
-
-""""""""""""""""""""""""
 "    vim-go config     "
 """"""""""""""""""""""""
 let g:go_fmt_command = "goimports"

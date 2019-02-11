@@ -1,5 +1,5 @@
 #!/bin/bash 
-rm -rf ~/.vim ~/.vimrc ~/.config/fish/config.fish ~/.config/fish/functions ~/.tmux ~/.tmux.conf 2> /dev/null
+rm -rf ~/.vim ~/.vimrc ~/.config/fish/config.fish ~/.config/fish/functions ~/.config/flake8 ~/.tmux ~/.tmux.conf 2> /dev/null
 
 brew install fish
 brew install tmux
@@ -13,6 +13,7 @@ ln -s ~/fish_dotfiles/config.fish ~/.config/fish/config.fish
 ln -s ~/fish_dotfiles/functions/ ~/.config/fish/functions
 ln -s ~/fish_dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/fish_dotfiles/vimrc ~/.vimrc
+ln -s ~/fish_dotfiles/flake8 ~/.config/flake8
 
 chsh -s /usr/local/bin/fish
 
