@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dag/vim-fish'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'nvie/vim-flake8'
 call plug#end()
 
 
@@ -128,6 +129,11 @@ let NERDTreeShowHidden=1
 
 
 """"""""""""""""""""""""
+"    flake8 config     "
+""""""""""""""""""""""""
+let g:flake8_ignore="E501,W293"
+
+""""""""""""""""""""""""
 "    vim-go config     "
 """"""""""""""""""""""""
 let g:go_fmt_command = "goimports"
@@ -171,3 +177,13 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+augroup py
+    autocmd!
+
+    " Go to definition
+    nnoremap gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+    " Call flake8 on save
+    autocmd BufWritePost *.py call Flake8()
+augroup END
