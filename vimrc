@@ -9,7 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'dag/vim-fish'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'branch': 'master', 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvie/vim-flake8'
 call plug#end()
@@ -137,8 +137,7 @@ let NERDTreeShowHidden=1
 let g:go_fmt_command = "goimports"
 
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-let g:go_metalinter_deadline = "5s"
+let g:go_metalinter_command = "golangci-lint"
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
