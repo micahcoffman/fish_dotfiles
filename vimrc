@@ -156,8 +156,9 @@ augroup go
   " :GoInfo
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
 
-  " :GoDef but opens in a vertical split
-  autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
+  " :GoVet
+  autocmd FileType go nmap <Leader>v <Plug>(go-vet)
+
   " :GoDef but opens in a horizontal split
   autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
 augroup END
