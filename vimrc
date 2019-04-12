@@ -8,10 +8,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
-Plug 'dag/vim-fish'
 Plug 'fatih/vim-go', { 'branch': 'master', 'do': ':GoUpdateBinaries' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'nvie/vim-flake8'
 call plug#end()
 
 
@@ -44,6 +41,7 @@ set lazyredraw                  " Wait to redraw
 set nowrap			            " Stop word wrapping
 set scrolloff=1			        " Space above/beside cursor from screen edges
 set sidescroll=1                " Sidescroll one column at a time
+set ttyfast                     " Speed up scrolling
 
 if $TMUX == ''
     set clipboard=unnamed       " Use system clipboard
@@ -100,10 +98,6 @@ nnoremap gW <C-w><C-w>
 nnoremap wg <C-w><C-w>
 nnoremap Wg <C-w><C-w>
 nnoremap wG <C-w><C-w>
-
-" Scroll page normal mode
-nnoremap J 5<C-e>
-nnoremap K 5<C-y>
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
