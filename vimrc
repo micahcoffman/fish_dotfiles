@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'fatih/vim-go', { 'branch': 'master', 'do': ':GoUpdateBinaries' }
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 
