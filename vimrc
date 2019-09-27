@@ -115,7 +115,7 @@ autocmd BufEnter * silent! lcd %:p:h
 nnoremap <Leader>p :CtrlP<CR>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\.git$\|vendor\|tf'
+  \ 'dir': '\.git$\|vendor'
   \}
 
 
