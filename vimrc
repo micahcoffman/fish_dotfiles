@@ -167,10 +167,3 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
-augroup py
-    autocmd!
-
-    " Go to definition
-    nnoremap gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-augroup END
