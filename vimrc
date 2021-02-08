@@ -167,3 +167,10 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+augroup javascript
+  autocmd!
+
+  set shiftwidth=2
+  set tabstop=2
+augroup END
